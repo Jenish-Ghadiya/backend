@@ -23,7 +23,7 @@ export default {
                 return res.status(401).json({ message: "Invalid password" });
             }
 
-            return res.status(200).json({ message: "Login successful", userId: user._id });
+            return res.status(200).json({ message: "Login successful", userId: user });
         } catch (error) {
             res.status(500).json({ message: "An error occurred during login" });
         }
