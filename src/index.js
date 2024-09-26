@@ -8,8 +8,6 @@ app.use(express.json());
 
 app.use("/api/v1/user", user);
 
-
-
 app.listen(PORT, () => {
     console.log("server is running on port " + PORT);
 });
