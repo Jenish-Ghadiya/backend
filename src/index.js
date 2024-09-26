@@ -5,6 +5,7 @@ import user from "./user/user.js";
 connectDb()
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/user", user);
 
