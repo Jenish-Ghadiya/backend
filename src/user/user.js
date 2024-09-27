@@ -9,7 +9,8 @@ const user = express.Router()
 
 user.get("/",(req,res)=>{
     res.json({
-        message: "you are login"
+        message: "you are login",
+        name:"17274279672504834078.jpg"
     })
 })
 user.get("/:userId/products",validate(product.validator),product.handler)
