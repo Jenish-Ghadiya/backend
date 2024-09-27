@@ -14,7 +14,7 @@ user.get("/",(req,res)=>{
     })
 })
 user.get("/:userId/products",validate(product.validator),product.handler)
-user.post("/signup",uploads.single('image'),(req,res,next)=>{console.log("req.file",req.file);next()},validate(signup.validator),signup.handler)
+user.post("/signup",uploads,(req,res,next)=>{console.log("req.file",req.file);next()},validate(signup.validator),signup.handler)
 user.post("/login",validate(login.validator),login.handler)
 
 export default user;
