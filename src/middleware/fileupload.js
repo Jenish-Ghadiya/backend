@@ -26,9 +26,9 @@ const storage = multer.diskStorage({
 const uploads = (req, res, next) => {
     try {
         multer({ storage: storage }).single('image')
-            next();
+        next();
     } catch (error) {
-        res.status(500).json({ messagee: error.message});
+        return res.status(500).json({ messagee: error.message});
     }
 };
 
