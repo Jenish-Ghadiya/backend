@@ -6,6 +6,7 @@ connectDb()
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/files",express.static("uploads"))
 
 app.use("/api/v1/user", user);
 

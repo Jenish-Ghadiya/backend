@@ -13,7 +13,12 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         require:true
+    },
+    image:{
+        type:String,
+        default: null,
     }
+
 },{
     timestamps:true
 })
