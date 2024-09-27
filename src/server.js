@@ -10,6 +10,10 @@ app.use("/files",express.static("uploads"))
 
 app.use("/api/v1/user", user);
 
+app.use("*", (req, res) => {
+    res.status(404).json({ message: "page not found" });
+})
+
 app.listen(PORT, () => {
     console.log("server is running on port " + PORT);
 });
